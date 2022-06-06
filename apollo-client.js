@@ -1,4 +1,5 @@
 import { ApolloClient,InMemoryCache } from "@apollo/client";
+import { gql, useQuery } from '@apollo/client';
 
 const client = new ApolloClient({
     uri: 'https://jacarezinho.stepzen.net/api/rousing-cat/__graphql',
@@ -6,7 +7,12 @@ const client = new ApolloClient({
         Authorization: `ApiKey ${process.env.NEXT_PUBLIC_STEPZEN_KEY}`
     },
     cache: new InMemoryCache(),
+
+
 })
+
+
+
 
 export default client
 
